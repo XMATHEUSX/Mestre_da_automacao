@@ -23,18 +23,3 @@ class dado:
 
 dado_20 = dado(20)
 dado_20.jogar_dados()
-'''
-while True:
-    Pergunta = input("Qual a sua Dúvida ? ")
-    while True:
-        continuar = input("Você possui mais dúvidas ? (S/N)")
-        if continuar == "N" or continuar == "n":
-            break
-        elif continuar == "S" or continuar == "s":
-            break
-        else:
-            print("***Entrada  incorreta***\n ")
-    if continuar == "N" or continuar == "n":
-        break
-print("Obrigado Por Usar O Programa")
-'''
