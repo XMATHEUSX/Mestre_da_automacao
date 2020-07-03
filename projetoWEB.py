@@ -13,7 +13,6 @@ class CursoAutomacao:
     def __init__(self):
         chrome_options = Options()
         chrome_options.add_argument('--lang=pt-BR')
-        self.os = '//input[@value="Mac"]'
         self.driver = webdriver.Chrome(
             executable_path=r'./chromedriver.exe', options=chrome_options)
         self.wait = WebDriverWait(
