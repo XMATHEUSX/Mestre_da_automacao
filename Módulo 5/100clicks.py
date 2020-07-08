@@ -13,22 +13,22 @@ import pyautogui
 
 
 class CursoAutomacao:
-    # def __init__(self):
-    #     chrome_options = Options()
-    #     chrome_options.add_argument('--lang=pt-BR')
-    #     chrome_options.add_argument('--disable-notifications')
+    def __init__(self):
+        chrome_options = Options()
+        chrome_options.add_argument('--lang=pt-BR')
+        chrome_options.add_argument('--disable-notifications')
 
-    #     self.driver = webdriver.Chrome(
-    #         executable_path=os.getcwd()+os.sep+'chromedriver.exe', options=chrome_options)
-    #     self.wait = WebDriverWait(
-    #         driver=self.driver,
-    #         timeout=10,
-    #         poll_frequency=1,
-    #         ignored_exceptions=[
-    #             NoSuchElementException,
-    #             ElementNotVisibleException,
-    #             ElementNotSelectableException]
-    #     )
+        self.driver = webdriver.Chrome(
+            executable_path=os.getcwd()+os.sep+'chromedriver.exe', options=chrome_options)
+        self.wait = WebDriverWait(
+            driver=self.driver,
+            timeout=10,
+            poll_frequency=1,
+            ignored_exceptions=[
+                NoSuchElementException,
+                ElementNotVisibleException,
+                ElementNotSelectableException]
+        )
 
     def iniciar(self):
         self.driver.get(
@@ -40,6 +40,7 @@ class CursoAutomacao:
         time.sleep(3)
         for click in range(0, 100):
             pyautogui.click()
+        self.driver.quit()
 
     def criar_pasta(self):
         pyautogui.moveTo(1214, 411, duration=5)
@@ -50,4 +51,5 @@ class CursoAutomacao:
 
 
 curso = CursoAutomacao()
+curso.iniciar()
 curso.criar_pasta()
