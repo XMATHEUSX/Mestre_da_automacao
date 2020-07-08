@@ -34,18 +34,6 @@ class CursoAutomacao:
             elemento.send_keys(letter)
             time.sleep(random.randint(1, 10)/30)
     
-    def login(self):
-        time.sleep(3)
-        email_box = self.driver.find_element_by_xpath(
-            '//input[@type="email"]')
-        self.Digitando_como_uma_pessoa(self.email, email_box)
-        time.sleep(3)
-        senha = self.driver.find_element_by_xpath(
-            '//input[@type="text"]')
-        self.Digitando_como_uma_pessoa(self.senha, senha)
-        btn_login = self.driver.find_element_by_class_name('sc-kGXeez.dXzFBw')
-        btn_login.click()
-
 
     def Definindo_a_pesquisa(self):
         self.pesquisa = input("O que você quer pesquisar ?")
@@ -76,7 +64,7 @@ class CursoAutomacao:
                           self.valores[indice].text, self.local[indice].text]
             self.planilhas_precos.append(nova_linha)
         self.Planilhas.save(
-            f'Preços {self.pesquisa} Na Região De São Paulo.xlsx')
+            'Módulo 4'+os.sep+f'Preços {self.pesquisa} Na Região De São Paulo.xlsx')
 
     def proxima_pagina(self):
         try:

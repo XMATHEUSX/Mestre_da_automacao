@@ -1,6 +1,6 @@
 import os
 
 
-os.mkdir('Arquivos')
-os.makedirs('Arquivos'+os.sep+'Arquivos pdf')
-os.makedirs('Fotos'+os.sep+'Fotos Verão')
+os.mkdir('Módulo 4'+os.sep+'Arquivos')
+os.makedirs('Módulo 4'+os.sep+'Arquivos'+os.sep+'Arquivos pdf')
+os.makedirs('Módulo 4'+os.sep+'Fotos'+os.sep+'Fotos Verão')
