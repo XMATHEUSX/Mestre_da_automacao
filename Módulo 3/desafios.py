@@ -23,13 +23,6 @@ class CursoAutomacao:
             'divBotao')
         desafio6 = self.driver.find_elements_by_class_name(
             'form-control')
-            #
-        if desafio6 is not None:
-            print("Botão encontrado")
-        if desafio6 is None:
-            print("Botão não encontrado")
-        print(desafio6)
-
 
 curso = CursoAutomacao()
 curso.iniciar()

@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+import os
 
 
 class CursoAutomacao:
@@ -7,7 +8,7 @@ class CursoAutomacao:
         chrome_options = Options()
         chrome_options.add_argument('--lang=pt-BR')
         self.driver = webdriver.Chrome(
-            executable_path=r'./chromedriver.exe', options=chrome_options)
+             executable_path=os.getcwd()+os.sep+'chromedriver.exe', options=chrome_options)
 
     def iniciar(self):
         self.driver.get('https://cursoautomacao.netlify.app/')

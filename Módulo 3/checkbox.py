@@ -10,23 +10,20 @@ class CursoAutomacao:
         self.driver = webdriver.Chrome(
             executable_path=os.getcwd()+os.sep+'chromedriver.exe', options=chrome_options)
 
-            
     def iniciar(self):
         self.driver.get('https://cursoautomacao.netlify.app/')
 
-
     def encontra_botao_e_clica(self):
-            self.checkbox = self.driver.find_element_by_xpath(
+        self.checkbox = self.driver.find_element_by_xpath(
             '//input[@id="acessoNivel1Checkbox"]')
-            self.driver.execute_script(
+        self.driver.execute_script(
             "arguments[0].click()", self.checkbox)
-
 
     def verifica_se_botao_foi_selecionado(self):
         if self.checkbox.is_selected():
-            print("Botão encontrado")
+            print("Botão Selecionado")
         else:
-            print("Botão não encontrado")
+            print("Botão não selecionado")
 
 
 curso = CursoAutomacao()
