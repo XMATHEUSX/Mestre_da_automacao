@@ -27,3 +27,12 @@ os.chdir('..')
 # 4.3 navegando pra o diretorio pais da pasta arquivos
 os.chdir('..')
 print(os.getcwd())
+
+# Aula 3 criando_diretorios
+
+
+os.mkdir('Módulo 4'+os.sep+'Arquivos')
+
+os.makedirs('Módulo 4'+os.sep+'Arquivos'+os.sep+'Arquivos pdf')
+
+os.makedirs('Módulo 4'+os.sep+'Fotos'+os.sep+'Fotos Verão')
