@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from models.base import base
 from models.db_models import Produto
 import time
-
+import os
 
 
 class CursoAutomacao:
@@ -75,6 +75,7 @@ class CursoAutomacao:
         self.pagina()
         time.sleep(3)
         self.proxima_pagina()
+        self.driver.quit()
 
     def verificar_bd(self):
         for item in self.conexao.query(Produto).all():
