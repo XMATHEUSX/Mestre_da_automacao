@@ -41,18 +41,6 @@ def criar_album(conexao, nome, preco, artista_id):
     conexao.commit()
 
 
-# alterar dados
-# album_a_ser_alterado = conexao.query(Album).filter(
-#   Album.titulo == 'Winter Times').first()
-#album_a_ser_alterado.titulo = 'Winter Times 3000'
-# conexao.commit()
-
-# deleta  dados
-# album_a_ser_alterado = conexao.query(Album).filter(
-#    Album.titulo == 'Winter Times 3000').first()
-# conexao.delete(album_a_ser_alterado)
-# conexao.commit()
-
 # QUERY
 
 def Todos_artista(conexao):
@@ -69,3 +57,16 @@ def Procura_string(conexao, texto):
     # pesquisa por itens que contem uma string
     for item in conexao.query(Album).filter(Album.titulo.like(texto)):
         print(item.titulo, item.artista_id)
+
+
+# alterar dados
+# album_a_ser_alterado = conexao.query(Album).filter(
+#   Album.titulo == 'Winter Times').first()
+#album_a_ser_alterado.titulo = 'Winter Times 3000'
+# conexao.commit()
+
+# deleta  dados
+# album_a_ser_alterado = conexao.query(Album).filter(
+#    Album.titulo == 'Winter Times 3000').first()
+# conexao.delete(album_a_ser_alterado)
+# conexao.commit()
