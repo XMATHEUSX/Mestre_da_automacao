@@ -4,14 +4,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.common.exceptions import *
-import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models.base import base
 from models.db_models import Produto
 import time
-import os
-import itertools
+
 
 
 class CursoAutomacao:
