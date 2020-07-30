@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine, Column, Integer, String, Sequence, Numeric, ForeignKey, desc
 from sqlalchemy.orm import relationship
-from base import base
-from db_models import Album, Artista
+from models.base import base
 
 class Artista(base):
     __tablename__ = 'artista'
