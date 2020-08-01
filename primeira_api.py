@@ -26,11 +26,12 @@ class Postagem(db.Model):
     titulo = db.Column(db.String)
     id_autor = db.Column(db.Integer, db.ForeignKey('autor.id_autor'))
 
-    db.drop_all()
-    db.create_all()
-    autor = Autor(nome='matheus', email='matheus', senha='senha', admin=True,)
-    # db.session.add(autor)
-    # db.session.commit()
+
+db.drop_all()
+db.create_all()
+autor = Autor(nome='matheus', email='matheus', senha='senha', admin=True,)
+db.session.add(autor) 
+db.session.commit()
 
 
 if __name__ == '__main__':
